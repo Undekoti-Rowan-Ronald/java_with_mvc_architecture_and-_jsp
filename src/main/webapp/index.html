@@ -1,51 +1,272 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<title>Register Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Registration Form</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
+}
+
+body{
+
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(135deg,#4facfe,#00f2fe);
+
+}
+
+.container{
+
+    width:430px;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
+
+    animation:popup .6s ease;
+
+}
+
+@keyframes popup{
+
+from{
+
+transform:translateY(40px);
+opacity:0;
+
+}
+
+to{
+
+transform:translateY(0px);
+opacity:1;
+
+}
+
+}
+
+h1{
+
+text-align:center;
+
+color:white;
+
+margin-bottom:30px;
+
+font-size:34px;
+
+}
+
+table{
+
+width:100%;
+
+}
+
+td{
+
+padding:10px 0;
+
+color:white;
+
+font-weight:bold;
+
+}
+
+input{
+
+width:100%;
+
+padding:12px;
+
+border:none;
+
+outline:none;
+
+border-radius:10px;
+
+font-size:15px;
+
+transition:.3s;
+
+}
+
+input:focus{
+
+box-shadow:0 0 12px #00e5ff;
+
+transform:scale(1.02);
+
+}
+
+.submit{
+
+margin-top:20px;
+
+width:100%;
+
+padding:14px;
+
+border:none;
+
+border-radius:10px;
+
+background:#00c6ff;
+
+background:linear-gradient(to right,#0072ff,#00c6ff);
+
+font-size:18px;
+
+font-weight:bold;
+
+color:white;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.submit:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 10px 20px rgba(0,0,0,.3);
+
+}
+
+.footer{
+
+margin-top:18px;
+
+text-align:center;
+
+color:white;
+
+font-size:14px;
+
+}
+
+</style>
+
 </head>
 
 <body>
 
-<h1>Welcome to the Page</h1>
+<div class="container">
 
-<form method ="post" action ="./Register">
+<h1>Create Account</h1>
+
+<form action="./Register" method="post">
 
 <table>
 
-    <tr>
-        <td>Name</td>
-        <td><input type="text" name="uname"></td>
-    </tr>
+<tr>
 
-    <tr>
-        <td>Email</td>
-        <td><input type="email" name="uemail"></td>
-    </tr>
+<td>Name</td>
 
-    <tr>
-        <td>Contact Number</td>
-        <td><input type="number" name="uphoneNumber"></td>
-    </tr>
-    
-     <tr>
-        <td>City</td>
-        <td><input type="text" name="ucity"></td>
-    </tr>
+<td>
+<input
+type="text"
+name="uname"
+placeholder="Enter your name"
+required>
+</td>
 
-    <tr>
-        <td>PASSWORD</td>
-        <td><input type="password" name="upassword"></td>
-    </tr>
-    
-     <tr>
-       
-        <td><input type="submit" value ="SIGN UP"></td>
-    </tr>
+</tr>
+
+<tr>
+
+<td>Email</td>
+
+<td>
+<input
+type="email"
+name="uemail"
+placeholder="Enter your email"
+required>
+</td>
+
+</tr>
+
+<tr>
+
+<td>Phone</td>
+
+<td>
+<input
+type="text"
+name="uphoneNumber"
+placeholder="Enter phone number"
+required>
+</td>
+
+</tr>
+
+<tr>
+
+<td>City</td>
+
+<td>
+<input
+type="text"
+name="ucity"
+placeholder="Enter your city"
+required>
+</td>
+
+</tr>
+
+<tr>
+
+<td>Password</td>
+
+<td>
+<input
+type="password"
+name="upassword"
+placeholder="Create password"
+required>
+</td>
+
+</tr>
 
 </table>
 
+<input
+class="submit"
+type="submit"
+value="SIGN UP">
+
 </form>
 
+<div class="footer">
+
+Registration Portal
+
+</div>
+
+</div>
+
 </body>
+
 </html>
